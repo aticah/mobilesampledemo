@@ -3,6 +3,7 @@ import homePage from "../pages/gondola_test_site/homePage";
 import productPage from "../pages/gondola_test_site/productPage";
 import cartPage from "../pages/gondola_test_site/cartPage";
 import { Payment } from "../data/payment";
+import { report } from "process";
 TestModule("WebDriver sample tests");
 const firstProduct: string = "Khaki Suede Polish Work Boots";
 const secondProduct: string = "Camo Fang Backpack Jungle";
@@ -46,4 +47,5 @@ TestCase("Testcase 02: Check Payment button is enabled when user inputs valid in
     await productPage.openShoppingCart();
     await cartPage.fillPaymentInfo(validPayment);
     await cartPage.checkPaymentButtonEnabled();
+    await report;
 });
