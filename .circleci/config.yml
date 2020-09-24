@@ -16,11 +16,11 @@ jobs:
       - run:
           name: Build souce code & compile test project
           command: docker-compose run --rm gondola.builder
-          working_directory: <input your project name>
+          working_directory: webpage
       - run:
           name: run all tests
           command: docker-compose run --rm gondola.tester
-          working_directory: <input your project name>
+          working_directory: webpage
           environment:
             BROWSER: << parameters.browser >>
       - store_test_results:
