@@ -24,9 +24,9 @@ jobs:
           environment:
             BROWSER: << parameters.browser >>
       - store_test_results:
-          path: webpage/results/
+          path: results/
       - store_artifacts:
-          path: webpage/results/
+          path: results/
           destination: results
 
 workflows:
