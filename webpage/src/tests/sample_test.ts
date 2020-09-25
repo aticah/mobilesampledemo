@@ -47,5 +47,5 @@ TestCase("Testcase 02: Check Payment button is enabled when user inputs valid in
     await productPage.openShoppingCart();
     await cartPage.fillPaymentInfo(validPayment);
     await cartPage.checkPaymentButtonEnabled();
-    
+    await report;
 });
