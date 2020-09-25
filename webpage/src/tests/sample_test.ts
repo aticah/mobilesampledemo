@@ -45,7 +45,8 @@ TestCase("Testcase 02: Check Payment button is enabled when user inputs valid in
     await productPage.addToCart(firstProduct);
     await productPage.addToCart(secondProduct, cartCount);
     await productPage.openShoppingCart();
+    await gondola.checkEqual("abc","aaa");
     await cartPage.fillPaymentInfo(validPayment);
     await cartPage.checkPaymentButtonEnabled();
-    await report;
+    
 });

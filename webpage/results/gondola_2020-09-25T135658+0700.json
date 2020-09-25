@@ -1,0 +1,204 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-09-25T06:56:38.850Z",
+    "end": "2020-09-25T06:56:58.107Z",
+    "duration": 19257,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d7974516-f3f2-4fbf-b9a9-9950de4bbcbd",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "431186b3-46da-4780-b750-dde9cc2a67c2",
+          "title": "WebDriver sample tests",
+          "fullFile": "D:\\Gondola\\mobilesampledemo\\webpage\\built\\tests\\sample_test.js",
+          "file": "\\built\\tests\\sample_test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook: codeceptjs.beforeSuite",
+              "fullTitle": "WebDriver sample tests \"before all\" hook: codeceptjs.beforeSuite",
+              "timedOut": false,
+              "duration": 5361,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.suiteSetup(suite)",
+              "err": {},
+              "uuid": "47c0b28f-a05c-458f-8176-251e2a23f1ea",
+              "parentUUID": "431186b3-46da-4780-b750-dde9cc2a67c2",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"before each\" hook: codeceptjs.before",
+              "fullTitle": "WebDriver sample tests \"before each\" hook: codeceptjs.before",
+              "timedOut": false,
+              "duration": 2706,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.setup(suite)",
+              "err": {},
+              "uuid": "8ff47490-6f3b-4665-a19f-0c6cb4b456d5",
+              "parentUUID": "431186b3-46da-4780-b750-dde9cc2a67c2",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook: codeceptjs.afterSuite",
+              "fullTitle": "WebDriver sample tests \"after all\" hook: codeceptjs.afterSuite",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.suiteTeardown(suite)",
+              "err": {},
+              "uuid": "f4710200-6377-4cca-bfa2-a55a5e58daee",
+              "parentUUID": "431186b3-46da-4780-b750-dde9cc2a67c2",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"after each\" hook: finalize codeceptjs",
+              "fullTitle": "WebDriver sample tests \"after each\" hook: finalize codeceptjs",
+              "timedOut": false,
+              "duration": 192,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.teardown(suite)",
+              "err": {},
+              "uuid": "c8f2f593-d72e-4fe9-b28d-14e9c7da33db",
+              "parentUUID": "431186b3-46da-4780-b750-dde9cc2a67c2",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Testcase 01: Check Cart items displayed correctly",
+              "fullTitle": "WebDriver sample tests: Testcase 01: Check Cart items displayed correctly",
+              "timedOut": false,
+              "duration": 3433,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await homePage_1.default.navigateTo();\nawait homePage_1.default.selectWomenTab();\nawait productPage_1.default.addToCart(firstProduct);\nawait productPage_1.default.addToCart(secondProduct, cartCount);\nawait productPage_1.default.openShoppingCart();\nawait cartPage_1.default.checkItemDisplayed(firstProduct);\nawait cartPage_1.default.checkItemDisplayed(secondProduct);",
+              "err": {},
+              "uuid": "c769a5df-d537-400e-b482-b233e09f801b",
+              "parentUUID": "431186b3-46da-4780-b750-dde9cc2a67c2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Testcase 02: Check Payment button is enabled when user inputs valid information.",
+              "fullTitle": "WebDriver sample tests: Testcase 02: Check Payment button is enabled when user inputs valid information.",
+              "timedOut": false,
+              "duration": 3216,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"Testcase_02__Check_Payment_button_is_enabled_when_user_inputs_valid_information..failed.png\"",
+              "code": "await homePage_1.default.navigateTo();\nawait homePage_1.default.selectWomenTab();\nawait productPage_1.default.addToCart(firstProduct);\nawait productPage_1.default.addToCart(secondProduct, cartCount);\nawait productPage_1.default.openShoppingCart();\nawait gondolajs_1.gondola.checkEqual(\"abc\", \"aaa\");\nawait cartPage_1.default.fillPaymentInfo(validPayment);\nawait cartPage_1.default.checkPaymentButtonEnabled();",
+              "err": {
+                "message": "AssertionError: Expected values to be strictly deep-equal:\n\n'abc' !== 'aaa'\n",
+                "estack": "Expected values to be strictly deep-equal:\n\n'abc' !== 'aaa'\n\n\nScenario Steps:\n\n- gondola.checkEqual(\"abc\", \"aaa\") at Test.<anonymous> (built\\tests\\sample_test.js:51:31)\n- gondola.click(\"//div[@class='navarea']//a[@href='/cart']\") at productPage.openShoppingCart (built\\pages\\gondola_test_site\\productPage.js:38:35)\n- gondola.waitForElement(\"//div[@class='navarea']//a[@href='/cart']\") at productPage.openShoppingCart (built\\pages\\gondola_test_site\\productPage.js:37:35)\n- gondola.waitForElementProperty(\"//div[@class='cartcount']\", \"innerText\", \"2\", 5) at productPage.addToCart (built\\pages\\gondola_test_site\\productPage.js:24:35)\n- gondola.click(\"//div[@class='item' and ./p[text()='Camo Fang Backpack Jungle']]/button\") at productPage.addToCart (built\\pages\\gondola_test_site\\productPage.js:23:35)\n- gondola.waitForElement(\"//div[@class='item' and ./p[text()='Camo Fang Backpack Jungle']]/button\") at productPage.addToCart (built\\pages\\gondola_test_site\\productPage.js:22:35)\n- gondola.waitForElementProperty(\"//div[@class='cartcount']\", \"innerText\", \"1\", 5) at productPage.addToCart (built\\pages\\gondola_test_site\\productPage.js:24:35)\n- gondola.click(\"//div[@class='item' and ./p[text()='Khaki Suede Polish Work Boots']]/button\") at productPage.addToCart (built\\pages\\gondola_test_site\\productPage.js:23:35)\n- gondola.waitForElement(\"//div[@class='item' and ./p[text()='Khaki Suede Polish Work Boots']]/button\") at productPage.addToCart (built\\pages\\gondola_test_site\\productPage.js:22:35)\n- gondola.waitForElement(\"//h1[text()=\"Women's\"]\") at homePage.selectWomenTab (built\\pages\\gondola_test_site\\homePage.js:30:35)\n- gondola.click(\"//div[@class='navarea']//ul/a[.=\"Women's\"]\") at homePage.selectWomenTab (built\\pages\\gondola_test_site\\homePage.js:29:35)\n- gondola.waitForElement(\"//div[@class='navarea']//ul/a[.=\"Women's\"]\") at homePage.selectWomenTab (built\\pages\\gondola_test_site\\homePage.js:28:35)\n- gondola.maximize() at homePage.navigateTo (built\\pages\\gondola_test_site\\homePage.js:21:35)\n- gondola.navigate(\"https://demo.gondolatest.com\") at homePage.navigateTo (built\\pages\\gondola_test_site\\homePage.js:20:35)\n\n",
+                "diff": "- abc\n+ aaa\n"
+              },
+              "uuid": "774bc6a2-978b-4674-b988-3b78cf412b4f",
+              "parentUUID": "431186b3-46da-4780-b750-dde9cc2a67c2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c769a5df-d537-400e-b482-b233e09f801b"
+          ],
+          "failures": [
+            "774bc6a2-978b-4674-b988-3b78cf412b4f"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 6649,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 0
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "6.2.3"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "gondola",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "results",
+        "inlineAssets": true,
+        "timestamp": "isoDateTime",
+        "reportFilename": "gondola",
+        "autoOpen": true,
+        "reportPageTitle": "Gondola Test Result"
+      },
+      "version": "4.1.0"
+    }
+  }
+}
