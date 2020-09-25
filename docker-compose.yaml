@@ -20,10 +20,11 @@ services:
       - BROWSER=${BROWSER}
     volumes: 
       - .:/src
-    command: npm run test -- --override "{\"helpers\":{\"WebDriver\":{\"browser\":\"$BROWSER\"}}}"
+
+    command: bash -c ls && npm run test -- --override "{\"helpers\":{\"WebDriver\":{\"browser\":\"$BROWSER\"}}}"
     #command: npm run test:$BROWSER
     #command: curl http://webdriver:4444/wd/hub/status
-    working_dir: /src
+    working_dir: /src/webpage
 
   gondola.builder:
     image: node:lts
